@@ -1,5 +1,5 @@
 <template>
-  <el-card>
+  <el-card style="overflow: auto;">
     <!-- 检索功能 -->
     <router-link class="back" to="/classmanagement">返回</router-link>
     <el-collapse v-model="activeNames" style="margin: 15px 0;">

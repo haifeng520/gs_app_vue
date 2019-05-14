@@ -1,15 +1,21 @@
 <template>
-  <div>
-    asd
-  </div>
+  <el-card style='overflow: auto;'>
+    
+  </el-card>
 </template>
 
 <script>
 export default {
+  name: '',
+  data () {
+    return {
 
-};
+    }
+  },
+  methods: {}
+}
 </script>
 
-<style>
+<style lang='less' scoped>
 
 </style>

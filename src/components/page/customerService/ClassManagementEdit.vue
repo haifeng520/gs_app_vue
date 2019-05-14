@@ -1,5 +1,5 @@
 <template>
-  <el-card>
+  <el-card style="overflow: auto;">
     <!-- 表头 -->
     <el-row style="margin: 15px 0;">
       <el-col :span="22"><div class="grid-content bg-purple">编辑班级</div></el-col>
@@ -99,6 +99,6 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 
 </style>
