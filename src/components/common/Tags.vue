@@ -8,7 +8,7 @@
                 <span v-show="item.title !== '欢迎页'" class="tags-li-icon" @click="closeTags(index)"><i class="el-icon-close"></i></span>
             </li>
         </ul>
-        <div class="tags-close-box">
+        <!-- <div class="tags-close-box">
             <el-dropdown @command="handleTags">
                 <el-button size="mini" type="primary">
                     标签选项<i class="el-icon-arrow-down el-icon--right"></i>
@@ -18,7 +18,7 @@
                     <el-dropdown-item command="all">关闭所有</el-dropdown-item>
                 </el-dropdown-menu>
             </el-dropdown>
-        </div>
+        </div> -->
     </div>
 </template>
 
@@ -44,7 +44,7 @@
                     this.$router.push('/welcome');
                 }
             },
-            // 关闭全部标签
+            /* // 关闭全部标签
             closeAll(){
                 this.tagsList = [];
                 this.$router.push('/welcome');
@@ -55,7 +55,7 @@
                     return item.path === this.$route.fullPath;
                 })
                 this.tagsList = curItem;
-            },
+            }, */
             // 设置标签
             setTags(route){
                 const isExist = this.tagsList.some(item => {
@@ -63,7 +63,8 @@
                 })
                 if(!isExist){
                     if(this.tagsList.length >= 8){
-                        // this.tagsList.shift(); 删除tabs
+                        // 标签 超过8后 自动删除第一个
+                        this.tagsList.shift(); // 删除tabs
                     }
                     if(route.fullPath.split('/').length <= 2) {
                         this.tagsList.push({
@@ -75,13 +76,11 @@
                 }
                 bus.$emit('tags', this.tagsList);
             },
-            handleTags(command){
+            /* handleTags(command){
                 command === 'other' ? this.closeOther() : this.closeAll();
-            }
+            } */
         },
         computed: {
-            
-            
             showTags() {
                 return this.tagsList.length > 0;
             }
