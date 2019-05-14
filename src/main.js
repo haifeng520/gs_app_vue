@@ -24,19 +24,19 @@ Vue.use(myHttp);
 
 // 定义全局过滤器 金额补齐两位小数
 Vue.filter('toDecimal', x => {
-    let f = parseFloat(x);    
-    if (isNaN(f)) {    
-        return false;    
-    }; 
-    let c = Math.round(x*100)/100;    
-    let s = c.toString();    
-    let rs = s.indexOf('.');    
-    if (rs < 0) {    
-        rs = s.length;    
-        s += '.';    
-    };   
-    while (s.length <= rs + 2) {    
-        s += '0';    
+    let f = parseFloat(x);
+    if (isNaN(f)) {
+        return false;
+    };
+    let c = Math.round(x*100)/100;
+    let s = c.toString();
+    let rs = s.indexOf('.');
+    if (rs < 0) {
+        rs = s.length;
+        s += '.';
+    };
+    while (s.length <= rs + 2) {
+        s += '0';
     };
     return s;
 });
