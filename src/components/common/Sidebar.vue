@@ -1,7 +1,11 @@
 <template>
     <div class="sidebar">
-        <el-menu class="sidebar-el-menu" :default-active="onRoutes" :collapse="collapse" background-color="#fff"
-            text-color="#000" active-text-color="#20a0ff" unique-opened router>
+        <!-- 浅绿色主题 -->
+        <!-- <el-menu class="sidebar-el-menu" :default-active="onRoutes" :collapse="collapse" background-color="#fff"
+            text-color="#000" active-text-color="#20a0ff" unique-opened router> -->
+        <!-- 深色主题 -->
+        <el-menu class="sidebar-el-menu" :default-active="onRoutes" :collapse="collapse" background-color="#324157"
+            text-color="#bfcbd9" active-text-color="#20a0ff" unique-opened router>    
             <template v-for="item in items">
                 <template v-if="item.subs">
                     <el-submenu :index="'/'+ item.index" :key="item.index">
@@ -84,15 +88,11 @@
     .sidebar > ul {
         height:100%;
     }
-    li.el-menu-item:hover {
+    /* li.el-menu-item:hover {
         background: #dff0ef !important;
         color: #00D1B2 !important;
     }
     li.el-menu-item:hover i {
         color: inherit;
-    }
-    /* .el-submenu__title:hover {
-        background: #dff0ef !important;
-        color: #00D1B2 !important;
     } */
 </style>

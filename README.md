@@ -29,6 +29,20 @@ import 'element-ui/lib/theme-default/index.css';    // 默认主题
 /*@import "../static/css/theme-green/color-green.css";   !*浅绿色主题*!*/
 ```
 
-第三步：打开 src/components/common/Sidebar.vue 文件，找到 el-menu 标签，把 background-color/text-color/active-text-color 属性去掉即可。
-
+第三步：打开 src/components/common/Sidebar.vue 文件。
+  template
+<!-- 浅绿色主题 -->
+<!-- <el-menu class="sidebar-el-menu" :default-active="onRoutes" :collapse="collapse" background-color="#fff"
+    text-color="#000" active-text-color="#20a0ff" unique-opened router> -->
+<!-- 深色主题 -->
+<el-menu class="sidebar-el-menu" :default-active="onRoutes" :collapse="collapse" background-color="#324157"
+    text-color="#bfcbd9" active-text-color="#20a0ff" unique-opened router>    
+  style
+  /* li.el-menu-item:hover {
+        background: #dff0ef !important;
+        color: #00D1B2 !important;
+    }
+    li.el-menu-item:hover i {
+        color: inherit;
+    } */
 ## License
